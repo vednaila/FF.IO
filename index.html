@@ -4,14 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Free Fire Duo Tournament</title>
+
+  <!-- Gaming Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1c1c1c;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0)),
+        url('https://4kwallpapers.com/images/walls/thumbs_3t/12516.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       margin: 0;
       padding: 0;
@@ -19,42 +25,46 @@
 
     header {
       text-align: center;
-      background: #2c2c2c;
-      padding: 20px;
+      padding: 30px 20px 20px;
     }
 
     header h1 {
       color: #feca1b;
       margin: 0;
-      font-size: 1.8rem;
+      font-size: 2.2rem;
+      text-shadow: 0 0 10px #feca1b, 0 0 20px #feca1b;
     }
 
     .info {
-      background-color: #333;
+      background-color: rgba(0, 0, 0, 0.7);
       max-width: 800px;
       margin: 20px auto;
       padding: 20px;
-      border-radius: 12px;
+      border-radius: 15px;
       text-align: center;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     }
 
     .info p {
       margin: 10px 0;
-      line-height: 1.5;
+      line-height: 1.6;
+      font-size: 1rem;
     }
 
     form {
       max-width: 500px;
-      margin: 20px auto;
-      background-color: #2a2a2a;
-      padding: 20px;
-      border-radius: 10px;
+      margin: 30px auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
 
     form h2 {
       text-align: center;
       color: #feca1b;
       margin-bottom: 20px;
+      text-shadow: 0 0 8px #feca1b;
     }
 
     label {
@@ -66,16 +76,17 @@
     input {
       width: 100%;
       padding: 12px;
-      margin-top: 5px;
+      margin-top: 6px;
       border: none;
-      border-radius: 5px;
-      background-color: #444;
+      border-radius: 6px;
+      background-color: #222;
       color: white;
       font-size: 1rem;
     }
 
     input:focus {
       outline: 2px solid #feca1b;
+      background-color: #333;
     }
 
     button {
@@ -87,25 +98,28 @@
       color: black;
       font-weight: bold;
       border: none;
-      border-radius: 6px;
-      font-size: 1rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 0 10px #feca1b, 0 0 20px #feca1b;
+      transition: background-color 0.3s, transform 0.2s;
     }
 
     button:hover {
-      background-color: #e0b519;
+      background-color: #e6b800;
+      transform: scale(1.03);
     }
 
     .contact {
       text-align: center;
-      margin: 30px 0;
+      margin: 40px 0;
     }
 
     .contact a {
       color: #feca1b;
       text-decoration: none;
       font-size: 1rem;
+      text-shadow: 0 0 5px #feca1b;
     }
 
     @media screen and (max-width: 600px) {
@@ -114,7 +128,7 @@
       }
 
       form {
-        padding: 15px;
+        padding: 20px;
       }
 
       input,
@@ -172,7 +186,6 @@
       );
 
       const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=ved.naila1010@gmail.com&su=${subject}&body=${body}`;
-
       window.open(mailtoLink, '_blank');
     });
   </script>
