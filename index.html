@@ -90,37 +90,28 @@
 
   <div class="contact">
     <h3>Contact Admin</h3>
-    <p><a href="https://wa.me/919723663379" target="_blank">📱 Message on WhatsApp</a></p>
     <p><a href="mailto:ved.naila1010@gmail.com">📧 Send Email</a></p>
   </div>
 
   <script>
     document.getElementById('registrationForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert("Registration submitted! Admin will contact you via WhatsApp or Gmail.");
-      // Optional: Add backend or Google Sheets integration
+
+      const player1 = encodeURIComponent(this.player1.value);
+      const ffid1 = encodeURIComponent(this.ffid1.value);
+      const player2 = encodeURIComponent(this.player2.value);
+      const ffid2 = encodeURIComponent(this.ffid2.value);
+      const contact = encodeURIComponent(this.contact.value);
+
+      const subject = encodeURIComponent("Free Fire Duo Tournament Registration");
+      const body = encodeURIComponent(
+        `👤 Player 1: ${this.player1.value}\n🆔 FF ID 1: ${this.ffid1.value}\n👥 Player 2: ${this.player2.value}\n🆔 FF ID 2: ${this.ffid2.value}\n📞 Contact: ${this.contact.value}`
+      );
+
+      const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=ved.naila1010@gmail.com&su=${subject}&body=${body}`;
+
+      window.open(mailtoLink, '_blank');
     });
   </script>
-<script>
-  document.getElementById('registrationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    // Get form values
-    const player1 = encodeURIComponent(this.player1.value);
-    const ffid1 = encodeURIComponent(this.ffid1.value);
-    const player2 = encodeURIComponent(this.player2.value);
-    const ffid2 = encodeURIComponent(this.ffid2.value);
-    const contact = encodeURIComponent(this.contact.value);
-
-    // Format message
-    const message = Free Fire Duo Tournament Registration:%0A%0A👤 Player 1: ${player1}%0A🆔 FF ID 1: ${ffid1}%0A👥 Player 2: ${player2}%0A🆔 FF ID 2: ${ffid2}%0A📞 Contact: ${contact};
-
-    // Replace with your WhatsApp number (with country code, no +)
-    const adminNumber = "919723663379";
-
-    // Redirect to WhatsApp with the message
-    window.open(https://wa.me/${adminNumber}?text=${message}, "_blank");
-  });
-</script>
 </body>
 </html>
