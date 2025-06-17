@@ -82,8 +82,7 @@
     <label>Player 2 Free Fire ID:</label>
     <input type="text" name="ffid2" required>
 
-    <label>Contact Number (WhatsApp):</label>
-    <input type="text" name="contact" required>
+  
 
     <button type="submit">Submit Registration</button>
   </form>
@@ -105,7 +104,7 @@
 
       const subject = encodeURIComponent("Free Fire Duo Tournament Registration");
       const body = encodeURIComponent(
-        `👤 Player 1: ${this.player1.value}\n🆔 FF ID 1: ${this.ffid1.value}\n👥 Player 2: ${this.player2.value}\n🆔 FF ID 2: ${this.ffid2.value}\n📞 Contact: ${this.contact.value}`
+        `👤 Player 1: ${this.player1.value}\n🆔 FF ID 1: ${this.ffid1.value}\n👥 Player 2: ${this.player2.value}\n🆔 FF ID 2: ${this.ffid2.value}\n`
       );
 
       const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=ved.naila1010@gmail.com&su=${subject}&body=${body}`;
